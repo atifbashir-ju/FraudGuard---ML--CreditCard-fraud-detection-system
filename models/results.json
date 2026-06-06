@@ -1,0 +1,80 @@
+{
+  "models": {
+    "logistic_regression": {
+      "model": "LogisticRegression",
+      "threshold": 1.0,
+      "auc_roc": 0.9338,
+      "auc_pr": 0.6991,
+      "precision": 0.8824,
+      "recall": 0.6316,
+      "f1_score": 0.7362,
+      "precision_k": 0.72,
+      "cv_f1_mean": 0.9621,
+      "cv_f1_std": 0.0005,
+      "cv_auc_mean": 0.9947,
+      "cv_auc_pr_mean": 0.9951
+    },
+    "random_forest": {
+      "model": "RandomForest",
+      "threshold": 0.57,
+      "auc_roc": 0.961,
+      "auc_pr": 0.816,
+      "precision": 0.9452,
+      "recall": 0.7263,
+      "f1_score": 0.8214,
+      "precision_k": 0.76,
+      "cv_f1_mean": 0.9999,
+      "cv_f1_std": 0.0,
+      "cv_auc_mean": 1.0,
+      "cv_auc_pr_mean": 1.0
+    },
+    "xgboost": {
+      "model": "XGBoost",
+      "threshold": 0.991,
+      "auc_roc": 0.9705,
+      "auc_pr": 0.8093,
+      "precision": 0.9846,
+      "recall": 0.6737,
+      "f1_score": 0.8,
+      "precision_k": 0.76,
+      "cv_f1_mean": 0.9999,
+      "cv_f1_std": 0.0,
+      "cv_auc_mean": 1.0,
+      "cv_auc_pr_mean": 1.0,
+      "optuna_trials": 5
+    },
+    "lightgbm": {
+      "model": "LightGBM",
+      "threshold": 0.787,
+      "auc_roc": 0.9627,
+      "auc_pr": 0.8124,
+      "precision": 0.9351,
+      "recall": 0.7579,
+      "f1_score": 0.8372,
+      "precision_k": 0.76,
+      "cv_f1_mean": 0.9998,
+      "cv_f1_std": 0.0,
+      "cv_auc_mean": 1.0,
+      "cv_auc_pr_mean": 1.0,
+      "optuna_trials": 5
+    }
+  },
+  "best_model": "lightgbm",
+  "shap_top_features": {
+    "V14": 3.0731095405086695,
+    "V4": 1.0367698277824322,
+    "risk_score": 1.0126479074732957,
+    "V1": 0.7344472635291462,
+    "V12": 0.7166292369392528,
+    "v_std": 0.6853605805086065,
+    "log_amount": 0.6099950467254944,
+    "amount_squared": 0.5923397563427276,
+    "V11": 0.5891622662587616,
+    "V10": 0.5095969761331575,
+    "v_min": 0.49528103042224925,
+    "hour": 0.41864876726626193,
+    "V8": 0.4067484749717555,
+    "v_max": 0.35180826166373774,
+    "V15": 0.3276724529527604
+  }
+}
