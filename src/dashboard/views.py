@@ -8,9 +8,9 @@ from django.utils        import timezone
 from datetime            import timedelta
 from .models             import Transaction
 
-# Same server — direct internal call
-API = 'http://127.0.0.1:' + str(os.environ.get('PORT', '10000'))
-
+  
+_port = os.environ.get('PORT', '10000')
+API = f'http://127.0.0.1:{_port}'
 def _gen_txn_id():
     return 'TXN' + uuid.uuid4().hex[:8].upper()
 
